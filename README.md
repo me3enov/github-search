@@ -42,3 +42,9 @@
 ### Language:
 
 - English
+
+### Сan be better
+
+- Use octokit
+- Store token and run script in Codespaces.
+- Create a new list instead of clearing its children
