@@ -1,0 +1,6 @@
+.search-result__description
+  width: 100%
+  @include setLineClamp(10)
+  @include setFontStyle (400, 14px, 20px, 0)
+  @include for-phone-only
+    max-width: calc(100vw - ($maxPadding * 2))

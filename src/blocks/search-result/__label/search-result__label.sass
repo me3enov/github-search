@@ -1,0 +1,7 @@
+.search-result__label
+  width: 100%
+  max-width: 620px
+  @extend %overflow
+  @include setFontStyle (400, 14px, 20px, 0)
+  @include for-phone-only
+    max-width: calc(100vw - ($maxPadding * 2))

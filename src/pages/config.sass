@@ -1,0 +1,174 @@
+/* COLORS*/
+/* white*/
+$whiteLightness: 100%
+$white: hsl(0, 0%, $whiteLightness)
+
+/* accent*/
+$accent: #64C4ED
+
+/* accent dark*/
+$accentDark: #1d9bd2
+
+/* red*/
+$red: #c90e0e
+
+/* black #000000*/
+$black: hsl(0, 0%, calc($whiteLightness - 100%))
+
+/* dark #333333*/
+$gray33: hsl(0, 0%, calc($whiteLightness - 80%))
+
+/* gray #D9D9D9*/
+$grayD9: hsl(0, 0%, calc($whiteLightness - 15%))
+
+/* gray #F2F2F2*/
+$grayF2: hsl(0, 0%, calc($whiteLightness - 5%))
+
+/* SIZES*/
+$pageWidth: 100%
+$maxWidth: 800px
+$maxPadding: 40px
+$minPadding: 20px
+
+%contentSize
+    width: 100%
+    max-width: $maxWidth
+    padding: 0 $maxPadding
+
+%widthWithIndents
+    max-width: calc($maxWidth - ($maxPadding * 2))
+
+
+/* MEDIA QUERY*/
+@mixin for-phone-only
+    @media (max-width: 799px)
+        @content
+
+
+/* DECORATION*/
+%transition
+    transition: .3s
+
+%overflow
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+/* MIXINS*/
+@mixin setBackground ($path, $width, $height)
+    background-image: url($path)
+    background-size: $width, $height
+    background-repeat: no-repeat
+    background-position: center
+
+@mixin createButton ($width, $height)
+    width: $width
+    height: $height
+    border-radius: calc($height / 2)
+
+@mixin setFontStyle ($weight, $size, $height, $spacing)
+    font-weight: $weight
+    font-size: $size
+    line-height: $height
+    letter-spacing: $spacing
+
+@mixin setLineClamp ($count)
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -moz-box
+    -moz-box-orient: vertical
+    display: -webkit-box
+    -webkit-line-clamp: $count
+    -webkit-box-orient: vertical
+    line-clamp: $count
+    box-orient: vertical
+
+/* STYLE FOR ALL PAGE*/
+*
+    color: $gray33
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    font-family: 'Roboto', Sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+    -webkit-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%
+    -moz-text-size-adjust: 100%
+    -webkit-font-feature-settings: 'kern'
+    font-feature-settings: 'kern'
+    padding: 0
+    margin: 0 auto
+
+
+/* MY NORMOLIZE CSS*/
+a
+    background-color: transparent
+    text-decoration: none
+
+img
+    border-style: none
+
+ul
+    list-style: none
+
+button,
+input,
+optgroup,
+select,
+textarea
+    margin: 0
+
+button,
+select
+    text-transform: none
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"]
+    -webkit-appearance: button
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+    border-style: none
+    padding: 0
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+    outline: 1px dotted ButtonText
+
+fieldset
+    padding: 0
+
+textarea
+    overflow: auto
+
+[type="checkbox"],
+[type="radio"]
+    box-sizing: border-box
+    padding: 0
+
+template
+    display: none
+
+[hidden]
+    display: none
+
+a,
+button,
+select,
+input
+    border: none
+    background: transparent
+    @extend %transition
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+    -webkit-tap-highlight-color: transparent
+    &:focus
+        outline: none
+
+

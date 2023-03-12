@@ -1,0 +1,19 @@
+.form__button
+  color: $white
+  max-width: calc($maxWidth - ($maxPadding * 2))
+  background-color: $accent
+  display: grid
+  padding: 0 20px
+  text-align: center
+  cursor: pointer
+  align-items: center
+  justify-content: center
+  @include setFontStyle (700, 16px, 20px, 0)
+  @include createButton(auto, 40px)
+  @extend %overflow
+  &:focus, &:hover
+    background-color: $accentDark
+  &:disabled
+    background-color: $grayD9
+    color: $grayF2
+    cursor: not-allowed

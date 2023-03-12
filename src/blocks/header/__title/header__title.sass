@@ -1,0 +1,6 @@
+.header__title
+  max-width: 720px
+  @extend %overflow
+  @include setFontStyle (700, 48px, 56px, 0)
+  @include for-phone-only
+    max-width: calc(100vw - ($maxPadding * 2))
