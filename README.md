@@ -42,19 +42,19 @@ https://me3enov.github.io/github-search/
 - Git
 
 ### Commands:
-Make install - Clean install a project
+**make install** - Clean install a project
 
-Make run: - webpack serve --open
+**make run** - webpack serve --open
 
-Make build: webpack --mode production
+**make build** - webpack --mode production
 
-Make deploy: build & deploy project in GitHub Pages
+**make deploy** - build & deploy project in GitHub Pages
 
-Make lint: Find problems
+**make lint** - Find problems
 
-Make lint-fix: Find and fix problems
+**make lint-fix** - Find and fix problems
 
-Make format: prettier format
+**make format** - prettier format
 
 ### Language:
 
