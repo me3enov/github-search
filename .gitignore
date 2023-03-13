@@ -1,4 +1,5 @@
-dist
+# Created by https://www.toptal.com/developers/gitignore/api/macos,webstorm
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,webstorm
 
 ### macOS ###
 # General
@@ -6,6 +7,7 @@ dist
 .AppleDouble
 .LSOverride
 node_modules
+dist
 et
 et.pub
 
