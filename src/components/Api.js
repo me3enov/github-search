@@ -4,14 +4,14 @@ export class Api {
       authorization: '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',
       'Content-Type': 'application/vnd.github+json'
     };
-    (this._url = 'https://api.github.com/search/'),
-      (this._repositories = 'repositories?q='),
-      (this._errorText = 'Error:');
+    this._url = 'https://api.github.com/search/';
+    this._repositories = 'repositories?q=';
   }
 
-  //get all matches repositories
-  getRepositories(text) {
-    return fetch(`${this._url}${this._repositories}${text}`, {
+  //get all matches
+  getRepositories(name) {
+    this._name = name;
+    return fetch(`${this._url}${this._repositories}${this._name}`, {
       method: 'GET',
       headers: this._headers
     }).then(this._checkServerResponse);
@@ -20,7 +20,7 @@ export class Api {
   //check response from server
   _checkServerResponse(res) {
     if (!res.ok) {
-      return Promise.reject(`${this._errorText} ${res.status}`);
+      return Promise.reject(`Error: ${res.status}`);
     }
     return res.json();
   }

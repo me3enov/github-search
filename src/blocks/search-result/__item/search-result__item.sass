@@ -4,7 +4,11 @@
   display: grid
   column-gap: 20px
   padding: $minPadding
-  grid-template-columns: 60px 1fr
+  grid-template-columns: 60px 600px
   border-radius: 20px
   border: 1px solid $grayD9
   background-color: transparent
+  @include for-phone-only
+    width: calc(100vw - ($maxPadding * 2))
+    grid-template-columns: 60px calc(100% - ($maxPadding * 2))
+
