@@ -9,6 +9,9 @@ build:
 	make install
 	npm run build
 
+deploy:
+	npm run deploy
+
 lint:
 	npm run lint
 

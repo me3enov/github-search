@@ -2,6 +2,10 @@
 
 ## To run the project use - "make run".
 
+### Deploy in GitHub Pages:
+
+https://me3enov.github.io/github-search/
+
 ### Screen demonstration:
 
 ![main page](./screens/main.png)
