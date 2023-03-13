@@ -1,7 +1,5 @@
 # Project "github-search"
 
-## To run the project use - "make run".
-
 ### Deploy in GitHub Pages:
 
 https://me3enov.github.io/github-search/
@@ -42,6 +40,21 @@ https://me3enov.github.io/github-search/
 - Flexbox
 - Grid Layout
 - Git
+
+### Commands:
+Make install - Clean install a project
+
+Make run: - webpack serve --open
+
+Make build: webpack --mode production
+
+Make deploy: build & deploy project in GitHub Pages
+
+Make lint: Find problems
+
+Make lint-fix: Find and fix problems
+
+Make format: prettier format
 
 ### Language:
 
